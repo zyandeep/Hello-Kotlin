@@ -16,10 +16,10 @@ fun main(args: Array<String>) {
     // var num2: Int = 9
     // var num3: Int = 21
 
-    ////// string interpolation
+    ////// STRING INTERPOLATION
     //println("addition of ${num1} and ${num2} is ${res}")
 
-    ///// if-else as expression
+    ///// IF-ELSE AS EXPRESSION
     /* var res = if(num1 < num2) {
         if(num1 < num3) {
             num1
@@ -53,11 +53,11 @@ fun main(args: Array<String>) {
     // var str2 : String = "Navin"
 
     
-    ///// Kotlin variables: Null and non-null; by default not null
+    ///// KOTLIN VARIABLES: NULL OR NON-NULL; BY DEFAULT NON-NULL
     // var name: String? = "null"
    
 
-    ///// Kotlin "when" => improved switch-case
+    ///// KOTLIN "WHEN" => IMPROVED SWITCH-CASE
     //val AGE: Int = 10
     // val name: String = "ball"
 
@@ -97,18 +97,40 @@ fun main(args: Array<String>) {
         println("$i => $v")
     } */
 
-    var people = HashMap<String, Int>()
-    people["bob"] = 12
-    people["john"] = 13
-    people["ram"] = 16
+    // var people = HashMap<String, Int>()
+    // people["bob"] = 12
+    // people["john"] = 13
+    // people["ram"] = 16
 
     //println(people["bob"])
 
-    for ((k, v) in people) {
-        println("key: $k; value: $v")
-    }
+    // for ((k, v) in people) {
+    //     println("key: $k; value: $v")
+    // }
 
+    ///// FUNCTIONS
+    //println(add(3, 5))
 
-
-
+    var res = max(3, 3)
+    println("Max: $res")
 }
+
+
+/* fun add(a: Int, b: Int){
+    println(a + b)
+} */
+
+/* fun add(a: Int, b: Int) : Int {
+    return a + b
+} */
+
+///// FUNCTION AS EXPRESSION
+fun add(a: Int, b: Int) : Int = a * b 
+
+fun max(a: Int, b: Int) = 
+if(a > b)
+    a
+else if(b > a)
+    b
+else
+    0                   // both are equal
