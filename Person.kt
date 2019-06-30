@@ -1,5 +1,8 @@
 class Person {
-    val CITY: String = "Jorhat";
-    var name: String = "";
-    var age: Int = 0;
+    var name: String = "Bob"
+    var age: Int = 23
+
+    fun show(): Unit {
+        println("name: $name; age: $age")
+    } 
 }

@@ -8,4 +8,9 @@ public class Align {
     public void setName(String name) {
         this.name = name;
     }
+
+    public static void main(String[] args) {
+        // calling Kotlin from Java
+        //System.out.println(HelloKt.max(12, 7));   
+    }
 }
