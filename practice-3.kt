@@ -3,12 +3,20 @@ fun add(t: Int): Unit = println(t + 10)
 fun main(args: Array<String>) {
 
     ///// HIGHER ORDER FUNCTIONS(LAMDAS)
-    var nums: List<Int> = listOf(10, 20, 30, 40)
+    var nums: List<Int> = listOf(2, 5, 8, 11, 21, 30, 40)
 
     //nums.forEach({ n -> println(n) })
-    nums.forEach(:: add)
+    //nums.forEach(:: add)
 
 
+    ///// FILTER AND MAP
+    /* var evens = nums.filter{ it % 2 == 0 }
+    evens.forEach({ println(it) })
+    var doubles = nums.map{ it * 2 }
+    doubles.forEach({ println(it) })  */
+
+    var result = nums.filter{it % 2 == 0}.map{it * 2}
+    result.forEach({ println(it) })
 
     ///// ARRAYS
     //var nums = intArrayOf(12, 5, 67, 4, 33)
