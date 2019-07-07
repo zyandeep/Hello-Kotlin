@@ -1,9 +1,15 @@
 //// LAMBDAS
 fun main(args: Array<String>) {
     //add(2, 13, {s: Int -> println(s)} )
-    var lambda =  {s1: String, s2: String -> "$s1 : $s2"}
+    /* var lambda =  {s1: String, s2: String -> "$s1 : $s2"}
 
-    myFunc("hello", "world", lambda)
+    myFunc("hello", "world", lambda) */
+
+    var range = 1..5
+    for (i in range.reversed()) {
+        println(i)
+    }
+
 }
 
 //// HIGHER ORDER FUNCTION
