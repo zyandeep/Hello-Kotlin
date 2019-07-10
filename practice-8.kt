@@ -1,9 +1,20 @@
-/*
-    Kotlin Scope Functions 
- */
+fun add(a: Int, b: Int): Int = a + b 
+
+fun returnMeFunction(): ((Int, Int) -> Int) {
+    return ::add
+}
+
 
 fun main(args: Array<String>) {
-    var p1 = Person("bob", 23, "programmer")
+    
+    /// Higher Order function returning lambda
+    var test: (Int, Int) -> Int = returnMeFunction()
+    println("res = ${test(2, 3)}")
+
+
+    /// Kotlin Scope Functions 
+
+    //var p1 = Person("bob", 23, "programmer")
     //var p2 = Person("john", 30, "driver")
 
     /// apply {}
@@ -13,11 +24,11 @@ fun main(args: Array<String>) {
     }.printPerson() */
 
     /// also {}
-    p1.also { n -> 
+   /*  p1.also { n -> 
         n.name = "Dwight"
         n.age = 38
     }.printPerson()
-
+ */
 
     /// let {}
    /*  p1.let {
